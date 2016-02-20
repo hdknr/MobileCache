@@ -12,8 +12,9 @@ using Xamarin.Forms.Platform.iOS;
 
 namespace MobileCache.iOS
 {
-	public class MainContentRenderer : PageRenderer
+	public class MainContentRenderer : PageRenderer		// UIViewController
 	{			
+		
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
