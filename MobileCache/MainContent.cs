@@ -14,7 +14,7 @@ namespace MobileCache
 						Text = "Hello ContentPage" ,
 						FontSize = 30,
 						TextColor =  Color.Red,
-					}
+					},
 				}
 			};
 		}

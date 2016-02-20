@@ -25,7 +25,15 @@ namespace MobileCache.Droid
 		{
 			base.OnElementChanged (e);
 
+
+			this.AddImage ();
+
 		}
+		void AddImage()
+		{
+
+		}
+
 	}
 }
 

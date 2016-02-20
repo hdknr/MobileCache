@@ -20,13 +20,17 @@ namespace MobileCache.iOS
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 
-
+			this.AddImage ();
 		}
 
 		public override void DidReceiveMemoryWarning ()
 		{
 			base.DidReceiveMemoryWarning ();
 			// Release any cached data, images, etc that aren't in use.
+		}
+
+		void AddImage()
+		{
 		}
 	}
 }
