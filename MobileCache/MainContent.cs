@@ -8,15 +8,7 @@ namespace MobileCache
 	{
 		public MainContent ()
 		{
-			Content = new StackLayout { 
-				Children = {
-					new Label { 
-						Text = "Hello ContentPage" ,
-						FontSize = 30,
-						TextColor =  Color.Red,
-					},
-				}
-			};
+			// Blank Content for Testing...
 		}
 	}
 }
