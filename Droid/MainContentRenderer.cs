@@ -41,7 +41,7 @@ namespace MobileCache.Droid
 			}
 		}
 
-		Android.Widget.ImageView  PhotoView = null;
+		ImageViewAsync PhotoViewAsync = null;
 
 		void AddImage(ViewGroup vg)
 		{
@@ -51,19 +51,20 @@ namespace MobileCache.Droid
 
 			/// Flicker
 			var url = "https://farm1.staticflickr.com/436/18556094406_99d0d38197_z.jpg";
-			PhotoView = new Android.Widget.ImageView (this.Context) {};
-			PhotoView.ImageFrom (url);
 
+			// FFImageLoading
+			PhotoViewAsync = new ImageViewAsync (Context);
+			ImageService.LoadUrl (url).Into (PhotoViewAsync);
+			vg.AddView (PhotoViewAsync);
 
-			vg.AddView(PhotoView);
 		}
 
 		protected override void OnLayout (bool changed, int l, int t, int r, int b)
 		{
 			base.OnLayout (changed, l, t, r, b);
 
-			if (PhotoView != null) {
-				PhotoView.Layout (PhotoView.Left, PhotoView.Top,r, b);
+			if (PhotoViewAsync != null) {
+				PhotoViewAsync.Layout (PhotoViewAsync.Left, PhotoViewAsync.Top,r, b);
 			}
 		}
 
