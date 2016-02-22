@@ -54,7 +54,10 @@ namespace MobileCache.Droid
 
 			// FFImageLoading
 			PhotoViewAsync = new ImageViewAsync (Context);
-			ImageService.LoadUrl (url).Into (PhotoViewAsync);
+			ImageService.LoadUrl (
+				url, 
+				new TimeSpan(0,0, 1)	// Cache Time Span (1sec)(ディスクの日付を見ているっぽい)
+			).Into (PhotoViewAsync);
 			vg.AddView (PhotoViewAsync);
 
 		}
